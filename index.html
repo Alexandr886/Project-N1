@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Project N1</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="shortcut icon" href="favicon.svg">
+</head>
+<body>
+   <img src="img/background.png" alt="" class="background-img">
+   <header class="header">
+      <div class="header-container">
+         <a href="index.html" class="header-logo">
+            <img src="img/logo.svg" alt="" class="header-logo__img">
+         </a>
+         <nav class="nav">
+            <a href="#" class="nav__link">Это меню</a>
+            <a href="#" class="nav__link">Должно</a>
+            <a href="#" class="nav__link">Быть</a>
+            <a href="#" class="nav__link">Закрепленным</a>
+            <a href="#" class="nav__link">При скролле</a>
+         </nav>
+         <div class="burger-menu">
+            <button type="button" data-modal-target="#modal" class="burger button">
+               Модалка
+            </button>
+            <div class="modal" id="modal">
+               <button data-close-button class="close-button">&times;</button>
+               <nav class="nav modal-nav">
+                  <a href="#" class="nav__link">Это меню</a>
+                  <a href="#" class="nav__link">Должно</a>
+                  <a href="#" class="nav__link">Быть</a>
+                  <a href="#" class="nav__link">Закрепленным</a>
+                  <a href="#" class="nav__link">При скролле</a>
+               </nav>
+            </div>
+            <div id="overlay"></div>
+         </div>
+      </div>
+   </header>
+   <main class="main">
+      <section class="section-hello">
+         <div class="wrapper">
+            <div class="hello-container">
+               <div class="hello-title">
+                  <div class="title">
+                     <div class="title-cover">
+                        <img src="img/icons/icon01-hello.svg" alt="hello image" class="title-cover__img">
+                     </div>
+                     <h1 class="title__title-h1">Привет!</h1>
+                     <p class="title__text">Группа компаний Freematiq и MITRA ищет себе клевого верстальщика. На постоянную работу в офисе или периодическую  работу по удаленке. Хотим предложить тебе вместо скучных тестовых заданий – сверстать эту страницу.</p>
+                  </div>
+                  <div class="skills">
+                     <h5 class="skills__title">В своей работе мы используем:</h5>
+                     <div class="skills-list">
+                        <div class="skills-item">
+                           <img src="img/icons/list-style.svg" alt="dot image" class="skills-item__style">
+                           <span class="skills-item__item">HTML5, CSS3</span>
+                        </div>
+                        <div class="skills-item">
+                           <img src="img/icons/list-style.svg" alt="dot image" class="skills-item__style">
+                           <span class="skills-item__item">Bootstrap 4</span>
+                        </div>
+                        <div class="skills-item">
+                           <img src="img/icons/list-style.svg" alt="dot image" class="skills-item__style">
+                           <span class="skills-item__item">Jade, Pug</span>
+                        </div>
+                        <div class="skills-item">
+                           <img src="img/icons/list-style.svg" alt="dot image" class="skills-item__style">
+                           <span class="skills-item__item">Less, SCSS</span>
+                        </div>
+                        <div class="skills-item">
+                           <img src="img/icons/list-style.svg" alt="dot image" class="skills-item__style">
+                           <span class="skills-item__item">Иконочные шрифты</span>
+                        </div>
+                        <div class="skills-item">
+                           <img src="img/icons/list-style.svg" alt="dot image" class="skills-item__style">
+                           <span class="skills-item__item">SVG иллюстрации</span>
+                        </div>
+                     </div>
+                     <p class="skills__text">Не ограничиваем этими технологиями, верстай как удобно.</p>
+                  </div>
+               </div>
+               <img src="img/main-img.png" alt="main image" class="main-img">
+            </div>
+            <div class="hello-task">
+               <div class="line"></div>
+               <p class="title__text title__text_center">Это твое первое задание в нашей компании. Если оно покажется тебе интересным и его реализация нам понравится – добро пожаловать в команду.</p>
+               <div class="hello-task-container">
+                  <div class="task">
+                     <img src="img/icons/icon10-monitor.svg" alt="monitor image" class="task__img">
+                     <p class="task__text">Первый блок на всю высоту экрана</p>
+                  </div>
+                  <div class="task">
+                     <img src="img/icons/icon11-gadgets.svg" alt="gadgets image" class="task__img">
+                     <p class="task__text">Отзывчивая
+                           верстка</p>
+                  </div>
+               </div>
+               <div class="line"></div>
+            </div>
+         </div>
+      </section>
+      <section class="section-process">
+         <div class="wrapper wrapper-process">
+            <img src="img/process.png" alt="process image" class="section-process__img">
+            <div class="title title_small">
+               <div class="title-cover">
+                  <img src="img/icons/icon02-rocket.svg" alt="rocket image" class="title-cover__img">
+               </div>
+               <h1 class="title__title-h1">Как ускорить процесс</h1>
+               <p class="title__text title__text_process">Чтобы иметь доступ ко всем функциям и возможностям Figma, которые облегчат и ускорят процесс верстки, зарегистрируйся и залогинься в системе.</p>
+               <button class="button button_registration">Зарегистрироваться</button>
+            </div>
+         </div>
+      </section>
+      <section class="section-progress">
+         <div class="wrapper">
+            <div class="progress">
+               <div class="progress-top">
+                  <div class="title">
+                     <div class="title-cover">
+                        <img src="img/icons/icon03-smile.svg" alt="smile image" class="title-cover__img">
+                     </div>
+                     <h1 class="title__title-h1 title__title-h1_white">Оцени себя</h1>
+                     <p class="title__text title__text_grey">Попробуй максимально объективно и честно оценить свои знания верстки по следующей шкале. И да, её тоже нужно сверстать.</p>
+                  </div>
+                  <div class="progress-circle">
+                     <div class="progress-ring-container">
+                        <svg class="progress-ring" width="120" height="120">
+                           <circle class="progress-ring__circle-default" cx="60" cy="60" r="58"></circle>
+                           <circle class="progress-ring__circle" cx="60" cy="60" r="58"></circle>
+                        </svg>
+                        <div class="info">
+                           <h2 class="info__title info__years">2</h2>
+                           <p class="info__text info__years-in-words">Года</p> 
+                        </div>
+                     </div>
+                     <div class="progress-ring-container">
+                        <svg class="progress-ring" width="120" height="120">
+                           <circle class="progress-ring__circle-default" cx="60" cy="60" r="58"> </circle>
+                           <circle class="progress-ring__circle progress-ring__circle_yellow" cx="60" cy="60" r="58"></circle>
+                        </svg>
+                        <div class="info">
+                           <h2 class="info__title info__projects">21</h2>
+                           <p class="info__text info__projects-in-words">Проект</p>
+                        </div> 
+                     </div>
+                  </div>
+               </div>
+               <div class="progress-bottom">
+                  <!-- при замене значения у value следует также изменить процент градиента в CSS в двух местах у background'а -->
+                  <input class="slider-range" type="range" min="0" max="100" value="20">
+                  <div class="slider-descriptions">
+                     <div class="slider-description slider-description_first">
+                        <div class="slider-description__dot"></div>
+                        <p class="slider-description__title">Intern</p>
+                     </div>
+                     <div class="slider-description">
+                        <div class="slider-description__dot"></div>
+                        <p class="slider-description__title">Junior</p>
+                     </div>
+                     <div class="slider-description">
+                        <div class="slider-description__dot"></div>
+                        <p class="slider-description__title">Middle</p>
+                     </div>
+                     <div class="slider-description">
+                        <div class="slider-description__dot"></div>
+                        <p class="slider-description__title">Senior</p>
+                     </div>
+                     <div class="slider-description slider-description_last">
+                        <div class="slider-description__dot"></div>
+                        <p class="slider-description__title">Lead</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section-slider">
+         <!-- svg "сердечко" -->
+         <svg display="none">
+               <symbol id="icon-heart" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.9669 6.24733C19.675 3.03407 17.4006 0.702777 14.5543 0.702777C12.658 0.702777 10.9218 1.72322 9.9448 3.3587C8.97667 1.70207 7.31158 0.702393 5.4457 0.702393C2.59977 0.702393 0.325019 3.03368 0.033464 6.24694C0.0103857 6.38888 -0.0842351 7.13584 0.203474 8.35399C0.618113 10.111 1.57586 11.7092 2.97248 12.9746L9.94019 19.2977L17.0275 12.975C18.4241 11.7092 19.3819 10.1114 19.7965 8.35399C20.0842 7.13623 19.9896 6.38926 19.9669 6.24733Z"/>
+               </symbol>
+         </svg>
+         <div class="title title_center">
+            <div class="title-cover">
+               <img src="img/icons/icon04-arms.svg" alt="arms image" class="title-cover__img">
+            </div>
+            <h1 class="title__title-h1 title__title-h1_small">Сверстаешь такой слайдер?</h1>
+            <p class="title__text title__text_slider">Это не так сложно, на самом деле. Сложнее придумать как он будет адаптироваться. Различные модные эффекты так же будут оценены по достоинству.</p>
+         </div>
+         <!-- --------------------- РАЗМЕТКА СЛАЙДЕРА--------------------- -->
+         <div class="slider-container">
+            <div class="slider-container-info">
+               <div class="slider-buttons">
+                  <button class="slider-buttons__btn slider-prev">
+                     <img src="img/icons/arrow-left.svg" alt="arrow left">
+                  </button>
+                  <button class="slider-buttons__btn slider-next">
+                     <img src="img/icons/arrow-right.svg" alt="arrow right">
+                  </button>
+               </div>
+               <div class="slider-info">
+                  <p class="slider-info__current"></p>
+                  <p class="slider-info__fraction">  /  </p>
+                  <p class="slider-info__last"></p>
+               </div>
+            </div>
+            <div class="slider">
+               <div class="slider-line">
+                  <div class="card">
+                     <div class="card-cover">
+                        <img src="img/products/product01.png" alt="shoes image" class="card-cover__img">
+                     </div>
+                     <h2 class="card__title">New Balance 840 90s</h2>
+                     <p class="card__description">840 90s Running объединили в себе спортивную эстетику и необходимый в городском ритме комфорт.</p>
+                     <div class="price">
+                        <span class="price__new">10 990 ₽</span>
+                        <span class="price__old">12 990 ₽</span>
+                     </div>
+                     <div class="colors">
+                        <div class="colors-container">
+                           <h5 class="colors__title">Цвет:</h5>
+                           <div class="color">
+                              <div class="color__in"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_blue"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_orange"></div>
+                              <div class="color__out"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="like">
+                        <svg class="like__svg">
+                           <use xlink:href='#icon-heart'></use>
+                        </svg>
+                     </div>
+                     <div class="die"></div>
+                     <button class="add-product">+</button>
+                  </div>
+                  <div class="card">
+                     <div class="card-cover">
+                        <img src="img/products/product02.png" alt="shoes image" class="card-cover__img">
+                     </div>
+                     <h2 class="card__title">New Balance 1500</h2>
+                     <p class="card__description">Встречайте новые расцветки бессмертной классики!</p>
+                     <div class="price">
+                        <span class="price__new">13 990 ₽</span>
+                        <span class="price__old">19 990 ₽</span>
+                     </div>
+                     <div class="colors">
+                        <div class="colors-container">
+                           <h5 class="colors__title">Цвет:</h5>
+                           <div class="color">
+                              <div class="color__in color__in_purple"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_black"></div>
+                              <div class="color__out"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="like">
+                        <svg class="like__svg">
+                           <use xlink:href='#icon-heart'></use>
+                        </svg>
+                     </div>
+                     <div class="die"></div>
+                     <button class="add-product">+</button>
+                  </div>
+                  <div class="card">
+                     <div class="card-cover">
+                        <img src="img/products/product03.png" alt="shoes image" class="card-cover__img">
+                     </div>
+                     <h2 class="card__title">New Balance 997H</h2>
+                     <p class="card__description">В 1991 году New Balance представил миру модель 997, которая вывела линейку 99X на совершенно новый уровень технологий и эстетики</p>
+                     <div class="price">
+                        <span class="price__new">10 990 ₽</span>
+                        <span class="price__old">12 990 ₽</span>
+                     </div>
+                     <div class="colors">
+                        <div class="colors-container">
+                           <h5 class="colors__title">Цвет:</h5>
+                           <div class="color">
+                              <div class="color__in color__in_purple"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_blue"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_grey"></div>
+                              <div class="color__out"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="like">
+                        <svg class="like__svg">
+                           <use xlink:href='#icon-heart'></use>
+                        </svg>
+                     </div>
+                     <div class="die"></div>
+                     <button class="add-product">+</button>
+                  </div>
+                  <div class="card">
+                     <div class="card-cover">
+                        <img src="img/products/product04.png" alt="shoes image" class="card-cover__img">
+                     </div>
+                     <h2 class="card__title">New Balance 247</h2>
+                     <p class="card__description">840 90s Running объединили в себе спортивную эстетику и необходимый в городском ритме комфорт.</p>
+                     <div class="price">
+                        <span class="price__new">10 990 ₽</span>
+                        <span class="price__old">12 990 ₽</span>
+                     </div>
+                     <div class="colors">
+                        <div class="colors-container">
+                           <h5 class="colors__title">Цвет:</h5>
+                           <div class="color">
+                              <div class="color__in"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_blue"></div>
+                              <div class="color__out"></div>
+                           </div>
+                           <div class="color">
+                              <div class="color__in color__in_orange"></div>
+                              <div class="color__out"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="like">
+                        <svg class="like__svg">
+                           <use xlink:href='#icon-heart'></use>
+                        </svg>
+                     </div>
+                     <div class="die"></div>
+                     <button class="add-product">+</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section-table">
+         <div class="wrapper">
+            <!-- svg "галочка" -->
+            <svg display="none">
+               <symbol id="icon-yes" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_86_32)">
+                     <path d="M15.7657 2.35933C15.4533 2.04689 14.9468 2.04689 14.6343 2.35933L5.04981 11.9439L1.36569 8.2598C1.05328 7.94736 0.546781 7.94739 0.234313 8.2598C-0.0781246 8.5722 -0.0781246 9.0787 0.234313 9.39114L4.48412 13.6409C4.79643 13.9533 5.30331 13.9531 5.6155 13.6409L15.7657 3.4907C16.0781 3.1783 16.0781 2.67177 15.7657 2.35933Z"/>
+                  </g>
+               </symbol>
+            </svg>
+            <div class="title title_center title_table">
+               <div class="title-cover">
+                  <img src="img/icons/icon05-boss.svg" alt="boss image" class="title-cover__img">
+               </div>
+               <h1 class="title__title-h1 title__title-h1_small">Время таблиц</h1>
+               <p class="title__text title__text_table">Какой серьезный проект может обойтись без таблиц? Мы не сомневаемся, что ты умеешь их верстать, попробуй реализовать такую таблицу.</p>
+            </div>
+            <div class="table">
+               <div class="table-item table-item-empty"></div>
+               <div class="table-item table-item-hat table-item-hat-standart table-item_alice-blue">
+                  <div class="hat">
+                     <div class="hat-cover">
+                        <img src="img/icons/icon07-rocket01.svg" alt="rocket image" class="hat-cover__img">
+                     </div>
+                     <h4 class="hat__title-h4">Стандартный</h4>
+                     <p class="hat__text">Это самый стандартный тариф, который подойдет для новых пользователей</p>
+                  </div>
+               </div>
+               <div class="table-item table-item-hat table-item-hat-optimal table-item_magnolia">
+                  <div class="hat">
+                     <div class="hat-cover">
+                        <img src="img/icons/icon08-rocket02.svg" alt="rocket image" class="hat-cover__img">
+                     </div>
+                     <h4 class="hat__title-h4">Оптимальный</h4>
+                     <p class="hat__text">Это самый стандартный тариф, который подойдет для новых пользователей</p>
+                  </div>
+               </div>
+               <div class="table-item table-item-hat table-item-hat-premium table-item_lavender">
+                  <div class="hat">
+                     <div class="hat-cover">
+                        <img src="img/icons/icon09-rocket03.svg" alt="rocket image" class="hat-cover__img">
+                     </div>
+                     <h4 class="hat__title-h4">Премиум</h4>
+                     <p class="hat__text">Это самый стандартный тариф, который подойдет для новых пользователей</p>
+                  </div>
+               </div>
+               <div class="table-item table-item-description table-item-description-place">Место на диске</div>
+               <div class="table-item table-item-description table-item-description-number">Количество проектов</div>
+               <div class="table-item table-item-description table-item-description-users">Пользователей в проекте</div>
+               <div class="table-item table-item-description table-item-description-editing">Интерактивное редактирование</div>
+               <div class="table-item table-item-description table-item-description-support">Техническая поддержка (в сутки)</div>
+               <div class="table-item table-item-description table-item-description-resources">Премиум ресурсы</div>
+               <div class="table-item table-item-description table-item-description-advertising">Отключение рекламы</div>
+               <div class="table-item table-item-description table-item-description-applications">Приложения для iOS и Android</div>
+               <div class="table-item table-item-data table-item-data-place1 table-item_alice-blue">1 GB</div>
+               <div class="table-item table-item-data table-item-data-place2 table-item_magnolia">5 GB</div>
+               <div class="table-item table-item-data table-item-data-place3 table-item_lavender">100 GB</div>
+               <div class="table-item table-item-data table-item-data-number1 table-item_alice-blue">1</div>
+               <div class="table-item table-item-data table-item-data-number2 table-item_magnolia">10</div>
+               <div class="table-item table-item-data table-item-data-number3 table-item_lavender ">
+                  <span class="table-item_unlimited">8</span>
+               </div>
+               <div class="table-item table-item-data table-item-data-users1 table-item_alice-blue">2</div>
+               <div class="table-item table-item-data table-item-data-users2 table-item_magnolia">5</div>
+               <div class="table-item table-item-data table-item-data-users3 table-item_lavender">
+                  <span class="table-item_unlimited">8</span>
+               </div>
+               <div class="table-item table-item-data table-item-data-editing1 table-item_alice-blue">
+                  <div class="table-item-data__no"></div>
+               </div>
+               <div class="table-item table-item-data table-item-data-editing2 table-item_magnolia">
+                  <svg class="table-item-data__svg table-item-data__svg_purple">
+                     <use xlink:href='#icon-yes'></use>
+                  </svg>
+               </div>
+               <div class="table-item table-item-data table-item-data-editing3 table-item_lavender">
+                  <svg class="table-item-data__svg table-item-data__svg_pink">
+                     <use xlink:href='#icon-yes'></use>
+                  </svg>
+               </div>
+               <div class="table-item table-item-data table-item-data-support1 table-item_alice-blue">1 час</div>
+               <div class="table-item table-item-data table-item-data-support2 table-item_magnolia">3 часа</div>
+               <div class="table-item table-item-data table-item-data-support3 table-item_lavender">12 часов</div>
+               <div class="table-item table-item-data table-item-data-resources1 table-item_alice-blue">
+                  <div class="table-item-data__no"></div>
+               </div>
+               <div class="table-item table-item-data table-item-data-resources2 table-item_magnolia">
+                  <div class="table-item-data__no"></div>
+               </div>
+               <div class="table-item table-item-data table-item-data-resources3 table-item_lavender">
+                  <svg class="table-item-data__svg table-item-data__svg_pink">
+                     <use xlink:href='#icon-yes'></use>
+                  </svg>
+               </div>
+               <div class="table-item table-item-data table-item-data-advertising1 table-item_alice-blue">
+                  <div class="table-item-data__no"></div>
+               </div>
+               <div class="table-item table-item-data table-item-data-advertising2 table-item_magnolia">
+                  <svg class="table-item-data__svg table-item-data__svg_pink">
+                     <use xlink:href='#icon-yes'></use>
+                  </svg>
+               </div>
+               <div class="table-item table-item-data table-item-data-advertising3 table-item_lavender">
+                  <svg class="table-item-data__svg table-item-data__svg_pink">
+                     <use xlink:href='#icon-yes'></use>
+                  </svg>
+               </div>
+               <div class="table-item table-item-data table-item-data-applications1 table-item_alice-blue">
+                  <div class="table-item-data__no"></div>
+               </div>
+               <div class="table-item table-item-data table-item-data-applications2 table-item_magnolia">
+                  <div class="table-item-data__no"></div>
+               </div>
+               <div class="table-item table-item-data table-item-data-applications3 table-item_lavender">
+                  <svg class="table-item-data__svg table-item-data__svg_pink">
+                     <use xlink:href='#icon-yes'></use>
+                  </svg>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="section-ready">
+         <div class="wrapper">
+            <div class="title title_center">
+               <div class="title-cover">
+                  <img src="img/icons/icon06-email.svg" alt="email image" class="title-cover__img">
+               </div>
+               <h1 class="title__title-h1 title__title-h1_small">Всё готово? Высылай нам!</h1>
+               <p class="title__text title__text_ready">Когда всё будет готово, высылай архив с версткой или ссылку на облачный файл на нашу почту, указав тему письма “Тестовое задание для верстальщиков”.</p>
+               <a href="mailto:hr@freematiq.com" class="email">hr@freematiq.com</a>
+            </div>
+         </div>
+      </section>
+      <div class="footer__line"></div>
+   </main>
+   <footer class="footer">
+      <div class="wrapper">
+         <div class="footer-content">
+            <h5 class="footer__title">© 2019, Project N1 - Special for you, Все права защищены</h5>
+            <p class="footer__text">Сделано во <a href="https://freematiq.com/" class="footer__link">Freematiq</a></p>
+         </div>
+      </div>
+   </footer>
+   <script src="script.js"></script>
+</body>
+</html>

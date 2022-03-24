@@ -1,3 +1,10 @@
+window.addEventListener('scroll', function() {
+   let header = document.querySelector('.header');
+   header.style.padding = 5 + 'px ' + 40 + 'px';
+})
+
+
+//--------------Работа с progress-кругами
 const circles = document.querySelectorAll('.progress-ring__circle');
 //переменная input объявлена глобально, т.к. используется для круглого прогресса и для горизонтального
 const input = document.querySelector('.slider-range');
@@ -49,7 +56,7 @@ input.addEventListener('touchmove', range);
    
 function range() {
    let x = input.value;
-   let color = 'linear-gradient(90deg, rgb(255, 79, 114)' + x + '%, rgb(35, 54, 76)' + x + '%)';
+   let color = 'linear-gradient(90deg, #BFA4FF, #FF4F72, #FFC359 ' + x + '%, #23364C ' + x + '%)';
    input.style.background = color;
 }
 
@@ -152,11 +159,9 @@ else {
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
-console.log(openModalButtons);
 
 openModalButtons.forEach (button => {
    button.addEventListener('click', () => {
-      console.log('Клик был')
       const modal = document.querySelector(button.dataset.modalTarget)
       openModal(modal);
    })

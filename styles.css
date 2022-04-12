@@ -11,6 +11,11 @@ body {
    padding: 32px 0;
 }
 
+/* класс присваивается для body при открытии модалки */
+.block {
+   overflow: hidden;
+}
+
 .background-img {
    position: absolute;
    top: 0;
@@ -40,7 +45,7 @@ body {
    padding: 30px 40px;
    display: flex;
    justify-content: center;
-   z-index: 10;
+   z-index: 100;
 }
 
 .header-container {
@@ -249,7 +254,6 @@ body {
 .hello-task-container {
    display: flex;
    justify-content: center;
-   align-items: center;
    gap: 55px;
 }
 
@@ -374,6 +378,10 @@ body {
    color: #B2BBC8;
 }
 
+.info__text::first-letter {
+   text-transform: uppercase;
+}
+
 /*--------------- стилизация ползунка -------------*/
 .slider-range {
    -webkit-appearance: none;
@@ -466,35 +474,42 @@ body {
 
 /*---------------------- СТИЛИЗАЦИЯ СЛАЙДЕРА-------------------*/
 .slider-container {
-   position: relative;
+   background: url('img/slider-bg.png') no-repeat;
+   height: 504px;
    display: flex;
-   justify-content: flex-end;
+   justify-content: space-between;
    align-items: center;
-   min-height: 504px;
 }
 
 .slider-container-info {
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   background: url(img/slider-bg.png) no-repeat;
-   border-radius: 0 10px 10px 0;
-   width: 555px;
-   height: 504px;
-   z-index: 0;
+   width: 30%;
    display: flex;
    flex-direction: column;
-   gap: 110px;
-   justify-content: flex-end;
-   padding: 50px;
    align-items: center;
+   gap: 110px;
+   padding: 85px 0 0 180px;
 }
+
+.swiper {
+   width: 70%;
+}
+
+/*перебитие дефолтных стилей у навигационных стрелок и пагинации*/
+.swiper-pagination,
+.swiper-button-prev,
+.swiper-button-next {
+   position: static !important;
+   margin: 0 !important;
+}
+
+/*скрытие дефолтных навигационных стрелок*/
+.swiper-button-prev::after, .swiper-button-next::after {display: none;}
 
 .slider-buttons {
    display: flex;
    flex-direction: column;
-   gap: 25px;
+   justify-content: space-between;
+   gap: 23px;
 }
 
 .slider-buttons__btn {
@@ -516,36 +531,14 @@ body {
    opacity: 1;
 }
 
-.slider-info {
-   display: flex;
-   justify-content: flex-start;
-   align-items: flex-end;
-   gap: 5px;
-   font-weight: 400;
-}
-
-.slider-info__current {
-   font-size: 72px;
-   color: #FFFFFF;
-   line-height: 100%;
-}
-
-.slider-info__fraction,
-.slider-info__last {
+.swiper-pagination {
    font-size: 42px;
    color: #47678B;
 }
 
-.slider {
-   max-width: 69.7%;
-   overflow: hidden;
-   z-index: 1;
-}
-
-.slider-line {
-   display: flex;
-   transition: 1s ease;
-   gap: 30px;
+.swiper-pagination-current {
+   font-size: 72px;
+   color: #FFFFFF;
 }
 
 /*--------------------------стилизация карточки товара*/
@@ -636,7 +629,18 @@ body {
    height: 24px;
    border-radius: 100%;
    background: none;
-   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}
+
+.color:hover {
+   border: 1px solid #CDCDCD;
+}
+
+.color-active {
+   border: 1px solid #CDCDCD;
 }
 
 .color__in {
@@ -644,12 +648,6 @@ body {
    height: 12px;
    border-radius: 100%;
    background: #D45D5E;
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   z-index: 1;
 }
 
 .color__in_blue {
@@ -674,28 +672,6 @@ body {
 
 .color__in_grey {
    background: #97938F;
-}
-
-.color__out {
-   width: 24px;
-   height: 24px;
-   border-radius: 100%;
-   background: none;
-   border: 1px solid transparent;
-   transition: 0.3s;
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-.color__in:hover + .color__out {
-   border: 1px solid #CDCDCD;
-}
-
-/*класс присвоен в JS, срабатывающий при клике на .color__in*/
-.color__out_active {
-   border: 1px solid #CDCDCD;
 }
 
 .like {
@@ -1092,7 +1068,6 @@ body {
    }
 
    .slider-container-info {
-      align-items: flex-start;
       padding-left: 100px;
    }
 }
@@ -1108,7 +1083,6 @@ body {
    }
 
    .slider-container-info {
-      align-items: flex-start;
       padding-left: 50px;
    }
 }
@@ -1185,29 +1159,8 @@ body {
       margin-bottom: 230px;
    }
 
-
-   .slider-container {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 40px;
-   }
-
-   .slider-container-info {
-      position: relative;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 50px;
-   }
-
-   .slider-buttons {
-      flex-direction: row;
-   }
-
-   .slider {
-      position: absolute;
-      bottom: -170px;
-      left: 15px;
-      max-width: 93%;
+   .swiper {
+      padding-left: 100px;
    }
 
    .table {
@@ -1243,7 +1196,39 @@ body {
    }
 }
 
+@media (max-width: 625px) {
+   .slider-container-info {
+      width: 50%;
+      padding-left: 0;
+   }
+}
+
 @media (max-width: 600px) {
+   .section-slider {
+      margin-bottom: 50px;
+   }
+
+   .slider-container {
+      flex-direction: column;
+      height: 100%;
+   }
+
+   .slider-buttons {
+      display: flex;
+      gap: 23px;
+   }
+
+   .slider-container-info {
+      gap: 0;
+      margin-bottom: 20px;
+      padding-top: 20px;
+   }
+
+   .swiper {
+      width: 240px;
+      padding: 0;
+   }
+
    .modal {
       padding: 60px 15px;
    }
@@ -1276,14 +1261,6 @@ body {
       font-size: 13px;
    }
 
-   .section-slider .title {
-      padding: 0 15px;
-   }
-
-   .slider-container-info {
-      width: 100%;
-   }
-
    .table-item {
       padding: 5px;
    }
@@ -1313,4 +1290,4 @@ body {
    .hat {
       word-break: break-word;
    }
-}
+}  

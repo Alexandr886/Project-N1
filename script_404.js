@@ -2,38 +2,31 @@
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
-console.log(openModalButtons);
 
 openModalButtons.forEach (button => {
    button.addEventListener('click', () => {
-      console.log('Клик был')
       const modal = document.querySelector(button.dataset.modalTarget)
-      openModal(modal);
+      openCloseModal(modal);
    })
 })
 
 overlay.addEventListener('click', () => {
    const modals = document.querySelectorAll('.modal.active');
    modals.forEach(modal => {
-         closeModal(modal);
+      openCloseModal(modal);
    })
 })
 
 closeModalButtons.forEach(button => {
    button.addEventListener('click', () => {
       const modal = button.closest('.modal');
-      closeModal(modal);
+      openCloseModal(modal);
    })
 })
 
-function openModal(modal) {
+function openCloseModal(modal) {
    if (modal == null) return
-   modal.classList.add('active');
-   overlay.classList.add('active');
-}
-
-function closeModal(modal) {
-   if (modal == null) return
-   modal.classList.remove('active');
-   overlay.classList.remove('active');
+   modal.classList.toggle('active');
+   overlay.classList.toggle('active');
+   document.body.classList.toggle('block')
 }

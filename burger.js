@@ -1,4 +1,4 @@
-//---------------------------------МОДАЛКА для 404.html
+//---------------------------------МОДАЛКА
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
